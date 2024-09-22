@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rikto-an app for highschoolers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #35424a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            display: flex;
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rikto</h1>
+    <nav>
+        <a href="#ride">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#KeyFeatures">KeyFeatures</a>
+    </nav>
+</header>
+
+<main>
+    <section id="ride">
+        <h2>Home</h2>
+        <p>Request your ride or schedule your ride</p>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+            }
+            .container {
+                flex: 1;
+                max-width: 600px;
+                margin: auto;
+                background: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                text-align: center;
+            }
+            label {
+                display: block;
+                margin: 10px 0 5px;
+            }
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"], 
+            button {
+                background-color: #35424a;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+                margin-top: 10px;
+            }
+            input[type="submit"]:hover, 
+            button:hover {
+                background-color: #45a049;
+            }
+            footer {
+                text-align: center;
+                padding: 20px;
+                background: #35424a;
+                color: white;
+            }
+        </style>
+        <script>
+            function openGoogleMaps() {
+                const source = document.getElementById('source').value;
+                const destination = document.getElementById('destination').value;
+                const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`;
+                window.open(mapsUrl, '_blank'); // Open Google Maps in a new tab
+            }
+        </script>
+    </head>
+    <body>
+    
+    <div class="container">
+        <h1>Ride Request</h1>
+        <form onsubmit="event.preventDefault(); openGoogleMaps();">
+            <label for="source">Source Point:</label>
+            <input type="text" id="source" name="source" placeholder="Enter your source point" required>
+    
+            <label for="destination">Destination Point:</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter your destination point" required>
+    
+            <input type="submit" value="Request Ride">
+            <button type="button" onclick="openGoogleMaps()">Open in Google Maps</button>
+        </form>
+    </div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Rikto is a new innovative platform designed specifically for high school students, offering safe, reliable, and affordable rides to and from school, extracurricular activities, and social events. With a focus on convenience and safety, Rikto aims to make transportation stress-free for students and their parents.
+
+        </p>
+        <img src="i:\velocity project\company logo.jpg" alt="rikto logo" width="300" height="300" style="display: block; margin: 0 auto;">
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you'd like to reach out, you can contact us via email at rikto@rikto.in.</p>
+    </section>
+    <section id="KeyFeatures">
+        <b><h2>KeyFeatures-</h2></b>
+        <br>
+        <p><b>1.Student-Centric Design:-</b>
+            <br>
+            <br>
+            Rikto’s user interface is tailored for high school students, making it easy to book rides quickly. With just a few taps, students can schedule a ride for themselves or their friends.
+            <br>
+            <br>
+            <b>2.Safety First:-</b>
+            <br>
+            <br>
+            Safety is the top priority at Rikto. All drivers undergo thorough background checks and training. The app features GPS tracking, allowing parents to monitor rides in real time through Google Maps naivgating systems, ensuring peace of mind.
+            <br>
+            <br>
+            <b>3.Affordable Pricing:-</b>
+            <br>
+            <br>
+            Rikto understands the budget constraints of students and their families. The platform offers competitive pricing and various payment options, including student discounts and subscription models for regular users.
+            <br>
+            <br>
+            <b>4.Flexible Scheduling:-</b>
+            <br>
+            <br>
+            Whether it’s a one-time ride to a special event or daily commutes, Rikto offers flexible scheduling options. Students can set recurring rides for a hassle-free experience.
+            <br>
+            <br>
+            <b>5.User Reviews and Ratings:-</b>
+            <br>
+            <br>
+            Students can leave reviews and ratings for drivers, helping to maintain high service standards. This community feedback helps ensure quality and reliability.
+            <br>
+            <br>
+            <b>6.Support and Communication:-</b>
+            <br>
+            <br>
+            Rikto provides in-app support, allowing students to communicate directly with drivers and customer service. This ensures that any concerns are addressed promptly.</p>
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="i:\velocity project\pics for website\1.jpg" alt="Image 1" align-items="center" width="500" height="800">
+                </div>
+                <div class="mySlides">
+                    <img src="i:\velocity project\pics for website\2.png.jpg" alt="Image 2" align-items="center">
+                </div>
+                <div class="mySlides">
+                    <img src="i:\velocity project\pics for website\3.jpg" alt="Image 3" align-items="center">
+                </div>
+                <div class="mySlides">
+                    <img src="i:\velocity project\pics for website\4.jpg" alt="Image 4" align-items="center">
+                </div>
+                <div class="mySlides">
+                    <img src="i:\velocity project\pics for website\5.jpg" alt="Image 5" align-items="center">
+                </div>
+                <div class="mySlides">
+                    <img src="i:\velocity project\pics for website\6.JPG" alt="Image 6" align-items="center" >
+                </div>
+            </div>
+            
+            <script>
+                let slideIndex = 0;
+                showSlides();
+            
+                function showSlides() {
+                    const slides = document.getElementsByClassName("mySlides");
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1; }
+                    slides[slideIndex - 1].style.display = "block";
+                    setTimeout(showSlides, 4000); // Change image every 2 seconds
+                }
+            </script>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Rikto</p>
+</footer>
+</body>
+</html>
